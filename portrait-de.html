@@ -12,19 +12,18 @@
     <a href="index-de.html" class="site-name">fcwphoto</a>
     <nav>
       <a href="index-de.html">Home</a>
-      <a href="portfolio-de.html" aria-current="page">Portfolio</a>
+      <div class="nav-dropdown"><a href="portfolio-de.html" aria-current="page">Portfolio</a><div class="nav-dropdown-menu"><a href="portrait-de.html">Portraits</a><a href="stills-de.html">Stills</a></div></div>
       <a href="tfp-de.html">Zusammenarbeit</a>
-      <a href="about-de.html">Über mich</a>
     </nav>
     <div class="lang-switcher">
-      <a href="portrait.html" class="lang-btn">EN</a>
-      <span>/</span>
       <a href="portrait-de.html" class="lang-btn" aria-current="true">DE</a>
+      <span>/</span>
+      <a href="portrait.html" class="lang-btn">EN</a>
     </div>
   </header>
 
   <div class="subnav">
-    <a href="portrait-de.html" aria-current="page">Portrait</a>
+    <a href="portrait-de.html" aria-current="page">Portraits</a>
     <a href="stills-de.html">Stills</a>
   </div>
 
@@ -46,6 +45,12 @@
   <script>const GALLERY_EMPTY_MSG = 'Noch keine Fotos. URLs zum PHOTOS-Array hinzufügen.';</script>
   <script src="photos-portrait.js"></script>
   <script src="gallery.js"></script>
+
+  <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
+    <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
+    &nbsp;&middot;&nbsp;
+    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Datenschutz</a>
+  </footer>
 
 </body>
 </html>

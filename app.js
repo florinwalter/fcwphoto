@@ -8,8 +8,8 @@
 //   3. Paste the URL below.
 //
 const PHOTOS = [
-  { src: 'https://www.flickr.com/photo_download.gne?id=55147933695&secret=9e5f83597d&size=l&source=photoPageEngagement', title: 'Mountains' },
-  // { src: 'https://live.staticflickr.com/…/photo2_b.jpg', title: 'Sunset'    },
+  { src: 'https://www.flickr.com/photo_download.gne?id=55147933695&secret=9e5f83597d&size=l&source=photoPageEngagement', title: 'Mountains', flickrUrl: 'https://www.flickr.com/photos/flello/55147933695' },
+  // { src: 'https://live.staticflickr.com/…/photo2_b.jpg', title: 'Sunset', flickrUrl: 'https://www.flickr.com/photos/flello/<photo_id>' },
 ];
 // ──────────────────────────────────────────────────────────────────────────────
 

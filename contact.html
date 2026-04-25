@@ -12,24 +12,32 @@
     <a href="index.html" class="site-name">fcwphoto</a>
     <nav>
       <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
+      <div class="nav-dropdown"><a href="portfolio.html">Portfolio</a><div class="nav-dropdown-menu"><a href="portrait.html">Portraits</a><a href="stills.html">Stills</a></div></div>
       <a href="tfp.html">TFP</a>
-      <a href="about.html">About</a>
       <a href="contact.html" aria-current="page">Contact</a>
     </nav>
     <div class="lang-switcher">
-      <a href="contact.html" class="lang-btn" aria-current="true">EN</a>
-      <span>/</span>
       <a href="contact-de.html" class="lang-btn">DE</a>
+      <span>/</span>
+      <a href="contact.html" class="lang-btn" aria-current="true">EN</a>
     </div>
   </header>
 
   <main class="text-page">
     <div class="text-content">
       <h2>Contact</h2>
-      <p>Get in touch at <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>Get in touch at <a href="#" class="email-link">contact@fcwphoto.com</a></p>
+      <script>
+        (function(){var a=document.currentScript.previousElementSibling.querySelector('a');var e='contact'+'@'+'fcwphoto.com';a.href='mailto:'+e;})();
+      </script>
     </div>
   </main>
+
+  <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
+    <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
+    &nbsp;&middot;&nbsp;
+    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Datenschutz</a>
+  </footer>
 
 </body>
 </html>

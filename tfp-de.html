@@ -12,14 +12,13 @@
     <a href="index-de.html" class="site-name">fcwphoto</a>
     <nav>
       <a href="index-de.html">Home</a>
-      <a href="portfolio-de.html">Portfolio</a>
+      <div class="nav-dropdown"><a href="portfolio-de.html">Portfolio</a><div class="nav-dropdown-menu"><a href="portrait-de.html">Portraits</a><a href="stills-de.html">Stills</a></div></div>
       <a href="tfp-de.html" aria-current="page">Zusammenarbeit</a>
-      <a href="about-de.html">Über mich</a>
     </nav>
     <div class="lang-switcher">
-      <a href="tfp.html" class="lang-btn">EN</a>
-      <span>/</span>
       <a href="tfp-de.html" class="lang-btn" aria-current="true">DE</a>
+      <span>/</span>
+      <a href="tfp.html" class="lang-btn">EN</a>
     </div>
   </header>
 
@@ -27,12 +26,11 @@
     <div class="form-content">
       <h2>Zusammenarbeit</h2>
       <p class="form-intro">
-        Interesse an einer Time-for-Print-Zusammenarbeit? Füll das Formular aus
-        und ich melde mich bei dir.
+        Interesse an einer Time-for-Print-Zusammenarbeit? Füll das Formular aus und ich melde mich bei dir.
       </p>
 
       <!-- Replace YOUR_FORM_ID with the endpoint from formspree.io -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form action="https://formspree.io/f/xlgavdal" method="POST">
         <input type="hidden" name="_language" value="de" />
 
         <div class="form-section">
@@ -74,25 +72,68 @@
 
         <div class="form-section">
           <fieldset style="border:none;padding:0;margin:0">
-            <legend class="form-label">Stile, für die ich offen bin</legend>
+            <legend class="form-label">Genre</legend>
             <div class="checkbox-list">
               <label class="checkbox-item">
-                <input type="checkbox" name="styles" value="natural-light" /> Natürliches Licht / Outdoor
+                <input type="checkbox" name="genre" value="portrait" /> Portrait
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="styles" value="studio" /> Studio mit künstlichem Licht
+                <input type="checkbox" name="genre" value="lifestyle" /> Lifestyle
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="styles" value="fashion" /> Fashion &amp; Editorial
+                <input type="checkbox" name="genre" value="beauty" /> Beauty
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="styles" value="beauty" /> Beauty &amp; Headshots
+                <input type="checkbox" name="genre" value="conceptual" /> Konzeptuell
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="styles" value="conceptual" /> Konzeptuell &amp; künstlerisch
+                <input type="checkbox" name="genre" value="boudoir" /> Boudoir
               </label>
               <label class="checkbox-item">
-                <input type="checkbox" name="styles" value="boudoir" /> Boudoir
+                <input type="checkbox" name="genre" value="artistic-nude" /> Künstlerischer Akt
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-section">
+          <fieldset style="border:none;padding:0;margin:0">
+            <legend class="form-label">Location</legend>
+            <div class="checkbox-list">
+              <label class="checkbox-item">
+                <input type="checkbox" name="location" value="studio" /> Studio
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="location" value="outdoor-city" /> Outdoor - Stadt
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="location" value="outdoor-nature" /> Outdoor — Natur
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="location" value="indoor" /> Indoor
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-section">
+          <fieldset style="border:none;padding:0;margin:0">
+            <legend class="form-label">Garderobe</legend>
+            <div class="checkbox-list">
+              <label class="checkbox-item">
+                <input type="checkbox" name="wardrobe" value="clothed" /> Bekleidet
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="wardrobe" value="lingerie-swimwear" /> Dessous / Bademode
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="wardrobe" value="implied-nude" /> Implizierter Akt
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="wardrobe" value="artistic-nude-topless" /> Halbakt - Oben-ohne
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="wardrobe" value="artistic-nude-full" /> Vollakt
               </label>
             </div>
           </fieldset>
@@ -108,6 +149,48 @@
       </form>
     </div>
   </main>
+
+  <section class="faq-section">
+    <div class="faq-content">
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">Kostet das etwas?</p>
+        <p class="faq-a">Nein — das ist eine Time-for-Print (TFP) Zusammenarbeit. Keiner von uns bezahlt den anderen. Du gibst deine Zeit, ich gebe meine, und wir gehen beide mit Fotos nach Hause, die wir lieben.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Was machst du mit den Bildern?</p>
+        <p class="faq-a">Ausgewählte Fotos verwende ich möglicherweise in meinem Portfolio auf dieser Website und auf Flickr. Ich werde die Fotos niemals verkaufen oder ohne deine ausdrückliche schriftliche Zustimmung kommerziell verwenden.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Was darf ich mit den Bildern machen?</p>
+        <p class="faq-a">Du kannst die Fotos gerne für dein persönliches Portfolio, Social Media oder andere nicht-kommerzielle Zwecke verwenden. Ich freue mich über eine Nennung als Fotograf. Für kommerzielle Nutzung ist eine separate Vereinbarung erforderlich.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Warum muss ich die Kästchen im Formular ankreuzen?</p>
+        <p class="faq-a">Die Checkboxen helfen mir zu verstehen, was du dir für das Shooting vorstellst, bevor wir miteinander sprechen. Das spart uns beiden Zeit und sorgt dafür, dass wir von Anfang an auf einer Wellenlänge sind — besonders bei persönlicheren Genres wie Boudoir oder künstlerischem Akt, wo Vertrauen und klare Erwartungen besonders wichtig sind.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Kann ich jemanden zum Shooting mitbringen?</p>
+        <p class="faq-a">Ja, natürlich. Du kannst gerne eine Freundin, einen Freund oder eine Begleitperson mitbringen — sag mir einfach vorher Bescheid, damit ich entsprechend planen kann.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Wo findet das Shooting statt?</p>
+        <p class="faq-a">Hauptsächlich in und um Heidelberg. Ich bin offen für Outdoor-Locations, Indoor-Räumlichkeiten und gelegentlich auch Studio-Settings. Wenn du eine bestimmte Location im Kopf hast, erwähne sie im Formular — ich bin immer neugierig auf neue Orte.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
+    <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
+    &nbsp;&middot;&nbsp;
+    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Datenschutz</a>
+  </footer>
 
 </body>
 </html>

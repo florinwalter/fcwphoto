@@ -63,7 +63,12 @@ function showPhoto(index) {
   const photo = PHOTOS[index];
   lbImg.src = photo.src;
   lbImg.alt = photo.title || '';
-  lbTitle.textContent = photo.title || '';
+  if (photo.flickrURL) {
+    lbTitle.innerHTML = (photo.title ? photo.title + ' — ' : '') +
+      `<a href="${photo.flickrURL}" target="_blank" rel="noopener" style="color:inherit;opacity:0.6;font-size:0.75em">View on Flickr</a>`;
+  } else {
+    lbTitle.textContent = photo.title || '';
+  }
   lbPrev.style.visibility = index > 0 ? 'visible' : 'hidden';
   lbNext.style.visibility = index < PHOTOS.length - 1 ? 'visible' : 'hidden';
 }
