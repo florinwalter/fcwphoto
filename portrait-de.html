@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portrait &mdash; fcwphoto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index-de.html" class="site-name">fcwphoto</a>
+    <nav>
+      <a href="index-de.html">Home</a>
+      <a href="portfolio-de.html" aria-current="page">Portfolio</a>
+      <a href="tfp-de.html">Zusammenarbeit</a>
+      <a href="about-de.html">Über mich</a>
+    </nav>
+    <div class="lang-switcher">
+      <a href="portrait.html" class="lang-btn">EN</a>
+      <span>/</span>
+      <a href="portrait-de.html" class="lang-btn" aria-current="true">DE</a>
+    </div>
+  </header>
+
+  <div class="subnav">
+    <a href="portrait-de.html" aria-current="page">Portrait</a>
+    <a href="stills-de.html">Stills</a>
+  </div>
+
+  <main>
+    <div id="gallery" class="gallery"></div>
+    <div id="status" class="status"></div>
+  </main>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Fotoansicht">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Schließen">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Vorheriges">&#8592;</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Nächstes">&#8594;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-title" class="lightbox-title"></p>
+    </div>
+  </div>
+
+  <script>const GALLERY_EMPTY_MSG = 'Noch keine Fotos. URLs zum PHOTOS-Array hinzufügen.';</script>
+  <script src="photos-portrait.js"></script>
+  <script src="gallery.js"></script>
+
+</body>
+</html>

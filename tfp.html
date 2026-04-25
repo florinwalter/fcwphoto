@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collaborate &mdash; fcwphoto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="site-name">fcwphoto</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="tfp.html" aria-current="page">Collaborate</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="lang-switcher">
+      <a href="tfp.html" class="lang-btn" aria-current="true">EN</a>
+      <span>/</span>
+      <a href="tfp-de.html" class="lang-btn">DE</a>
+    </div>
+  </header>
+
+  <main class="form-page">
+    <div class="form-content">
+      <h2>Collaborate</h2>
+      <p class="form-intro">
+        Interested in working together on a time-for-print basis? Fill out the form
+        below and I'll get back to you.
+      </p>
+
+      <!-- Replace YOUR_FORM_ID with the endpoint from formspree.io -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <div class="form-section">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-input" type="text" id="name" name="name" required placeholder="Your name" />
+        </div>
+
+        <div class="form-section">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" required placeholder="your@email.com" />
+        </div>
+
+        <div class="form-section">
+          <label class="form-label" for="instagram">Instagram</label>
+          <input class="form-input" type="text" id="instagram" name="instagram" placeholder="@yourhandle" />
+        </div>
+
+        <div class="form-section">
+          <label class="form-label" for="city">City</label>
+          <input class="form-input" type="text" id="city" name="city" placeholder="Where are you based?" />
+        </div>
+
+        <div class="form-section">
+          <fieldset style="border:none;padding:0;margin:0">
+            <legend class="form-label">TFP experience</legend>
+            <div class="radio-list">
+              <label class="radio-item">
+                <input type="radio" name="experience" value="new" /> New to TFP
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="experience" value="some" /> Some experience
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="experience" value="experienced" /> Experienced
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-section">
+          <fieldset style="border:none;padding:0;margin:0">
+            <legend class="form-label">Styles I'm open to</legend>
+            <div class="checkbox-list">
+              <label class="checkbox-item">
+                <input type="checkbox" name="styles" value="natural-light" /> Natural light / outdoor
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="styles" value="studio" /> Studio with artificial lighting
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="styles" value="fashion" /> Fashion &amp; editorial
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="styles" value="beauty" /> Beauty &amp; headshots
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="styles" value="conceptual" /> Conceptual &amp; artistic
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="styles" value="boudoir" /> Boudoir
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label" for="message">Anything else you'd like to share</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Tell me a bit about yourself, your availability, or any ideas you have."></textarea>
+        </div>
+
+        <button class="form-submit" type="submit">Send</button>
+
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>
