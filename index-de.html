@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>fcwphoto</title>
+  <meta name="description" content="Portrait- und Stillfotografie von Florin Walter aus Heidelberg." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="fcwphoto" />
+  <meta property="og:description" content="Portrait- und Stillfotografie von Florin Walter aus Heidelberg." />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="748400f4-da05-4f5e-8b74-1cd7dfafafb4"></script>
 </head>
 <body>
 
@@ -13,7 +19,8 @@
     <nav>
       <a href="index-de.html" aria-current="page">Home</a>
       <div class="nav-dropdown"><a href="portfolio-de.html">Portfolio</a><div class="nav-dropdown-menu"><a href="portrait-de.html">Portraits</a><a href="stills-de.html">Stills</a></div></div>
-      <a href="tfp-de.html">Zusammenarbeit</a>
+      <a href="tfp-de.html">TFP</a>
+      <a href="contact-de.html">Kontakt</a>
     </nav>
     <div class="lang-switcher">
       <a href="index-de.html" class="lang-btn" aria-current="true">DE</a>
@@ -25,16 +32,42 @@
   <main class="about-page">
     <div class="about-layout">
       <div class="about-image">
-        <a href="https://www.flickr.com/photos/flello/55230552180/" target="_blank" rel="noopener"><img src="https://www.flickr.com/photo_download.gne?id=55230552180&secret=6c22a2eec4&size=l&source=photoPageEngagement" alt="Portrait des Fotografen" class="about-photo" /></a>
+        <img src="https://www.flickr.com/photo_download.gne?id=55230552180&secret=6c22a2eec4&size=l&source=photoPageEngagement" alt="Portrait des Fotografen" class="about-photo" id="about-img" style="cursor:pointer" />
       </div>
       <div class="about-text">
         <p>Hallo, schön dass du hier vorbeischaust! Ich bin Florin - Wissenschaftler, Musiker und Fotograf. Zurzeit wohne ich im schönen Heidelberg und bin in den letzten Zügen meiner Promotion.</p>
         <p>Fotos mache ich schon seit meiner Jugend, aber erst in den letzten Jahren ist daraus ein ernsthaftes und geliebtes Hobby geworden.
           Besonders reizt mich zurzeit die Portraitfotografie. Ich fotografiere vor allem für mich selbst und für die Menschen die auf den Bildern zu sehen sind, deshalb findet man mich nicht
-          auf Social Media und ich drucke meine Fotos oft einfach aus und hänge sie an die Wand oder erstelle Fotobücher. Falls du Lust hast, vor der Kamera zu stehen und mit mir zusammenzuarbeiten, melde dich gerne über den <a href="tfp-de.html">Zusammenarbeits-Bereich</a>!</p>
+          auf Social Media und ich drucke meine Fotos oft einfach nur aus und hänge sie an die Wand. Falls du selbst Lust hast, vor der Kamera zu stehen und mit mir zusammenzuarbeiten, melde dich gerne <a href="tfp-de.html">hier</a>!</p>
       </div>
     </div>
   </main>
+
+  <div id="about-lightbox" class="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="about-lb-close" aria-label="Schließen">&times;</button>
+    <div class="lightbox-content">
+      <img id="about-lb-img" src="" alt="Portrait des Fotografen" />
+      <p class="lightbox-title"><a href="https://www.flickr.com/photos/flello/55230552180/" target="_blank" rel="noopener" style="color:inherit;opacity:0.6;font-size:0.75em">Auf Flickr ansehen</a></p>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var lb = document.getElementById('about-lightbox');
+      var lbImg = document.getElementById('about-lb-img');
+      document.getElementById('about-img').addEventListener('click', function(){
+        lbImg.src = this.src;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+      document.getElementById('about-lb-close').addEventListener('click', function(){
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      });
+      lb.addEventListener('click', function(e){ if(e.target === lb){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }});
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && lb.classList.contains('open')){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }});
+    })();
+  </script>
 
   <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
     <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
