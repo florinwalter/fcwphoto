@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portrait &mdash; fcwphoto</title>
-  <meta name="description" content="Portrait photography by Florin Walter — a selection of portrait work from Heidelberg and beyond." />
+  <meta name="description" content="Portraitfotografie von Florin Walter — eine Auswahl aus Heidelberg und Umgebung." />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta property="og:title" content="Portrait — fcwphoto" />
-  <meta property="og:description" content="Portrait photography by Florin Walter — a selection of portrait work from Heidelberg and beyond." />
+  <meta property="og:description" content="Portraitfotografie von Florin Walter — eine Auswahl aus Heidelberg und Umgebung." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
   <script defer src="https://cloud.umami.is/script.js" data-website-id="748400f4-da05-4f5e-8b74-1cd7dfafafb4"></script>
@@ -17,15 +17,15 @@
   <header>
     <a href="index.html" class="site-name">fcwphoto</a>
     <nav>
-      <a href="index.html">Home</a>
-      <div class="nav-dropdown"><a href="portfolio.html" aria-current="page">Portfolio</a><div class="nav-dropdown-menu"><a href="portrait.html">Portraits</a><a href="stills.html">Stills</a></div></div>
+      <a href="index.html">Start</a>
+      <div class="nav-dropdown"><a href="portfolio.html" aria-current="page">Portfolio</a><div class="nav-dropdown-menu"><a href="portrait.html">Portraits</a><a href="stills.html">Stills</a></div></div><a href="portrait.html" class="nav-mobile-sub">Portraits</a><a href="stills.html" class="nav-mobile-sub">Stills</a>
       <a href="tfp.html">TFP</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">Kontakt</a>
     </nav>
     <div class="lang-switcher">
-      <a href="portrait-de.html" class="lang-btn">DE</a>
+      <a href="portrait.html" class="lang-btn" aria-current="true">DE</a>
       <span>/</span>
-      <a href="portrait.html" class="lang-btn" aria-current="true">EN</a>
+      <a href="portrait-en.html" class="lang-btn">EN</a>
     </div>
   </header>
 
@@ -39,23 +39,24 @@
     <div id="status" class="status"></div>
   </main>
 
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
-    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
-    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8592;</button>
-    <button class="lightbox-next" id="lightbox-next" aria-label="Next">&#8594;</button>
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Fotoansicht">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Schließen">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Vorheriges">&#8592;</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Nächstes">&#8594;</button>
     <div class="lightbox-content">
       <img id="lightbox-img" src="" alt="" />
       <p id="lightbox-title" class="lightbox-title"></p>
     </div>
   </div>
 
+  <script>const GALLERY_EMPTY_MSG = 'Noch keine Fotos. URLs zum PHOTOS-Array hinzufügen.';</script>
   <script src="photos-portrait.js"></script>
   <script src="gallery.js"></script>
 
   <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
-    <a href="impressum.html" style="color: #555; text-decoration: none;">Legal</a>
+    <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
     &nbsp;&middot;&nbsp;
-    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Privacy</a>
+    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Datenschutz</a>
   </footer>
 
 </body>

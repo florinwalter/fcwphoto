@@ -604,6 +604,11 @@ nav a[aria-current="page"] {
   transform: translateY(-50%);
 }
 
+/* Mobile-only flat nav links (replace dropdown on touch devices) */
+.nav-mobile-sub {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   header {
@@ -614,6 +619,14 @@ nav a[aria-current="page"] {
 
   nav {
     gap: 20px;
+  }
+
+  .nav-dropdown-menu {
+    display: none;
+  }
+
+  .nav-mobile-sub {
+    display: contents;
   }
 
   .gallery {
