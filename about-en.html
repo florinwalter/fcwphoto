@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About &mdash; fcwphoto</title>
+  <meta name="description" content="About Florin Walter — portrait and still life photography, based in Heidelberg." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="About — fcwphoto" />
+  <meta property="og:description" content="About Florin Walter — portrait and still life photography, based in Heidelberg." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="748400f4-da05-4f5e-8b74-1cd7dfafafb4"></script>
+</head>
+<body>
+
+  <header>
+    <a href="index-en.html" class="site-name">fcwphoto</a>
+    <nav>
+      <a href="index-en.html">Home</a>
+      <a href="about-en.html" aria-current="page">About</a>
+      <details class="nav-dropdown">
+        <summary><a href="gallery-en.html">Gallery</a></summary>
+        <div class="nav-dropdown-menu">
+          <a href="portrait-en.html">Portrait</a>
+          <a href="landscape-en.html">Landscape</a>
+          <a href="city-en.html">City</a>
+          <a href="nature-en.html">Nature</a>
+        </div>
+      </details>
+      <a href="blog-en.html">Blog</a>
+      <a href="collab-en.html">Collab</a>
+    </nav>
+    <div class="lang-switcher">
+      <a href="about.html" class="lang-btn">DE</a>
+      <span>/</span>
+      <a href="about-en.html" class="lang-btn" aria-current="true">EN</a>
+    </div>
+  </header>
+
+  <main class="about-page">
+    <div class="about-layout">
+      <div class="about-image">
+        <img src="https://www.flickr.com/photo_download.gne?id=55290888385&secret=d5ecd0f727&size=l&source=photoPageEngagement" alt="Portrait of the photographer" class="about-photo" id="about-img" style="cursor:pointer" />
+      </div>
+      <div class="about-text">
+        <p>
+          I got my first camera as a child, and photography has been part of my life ever since.
+          For a long time I mostly shot while travelling or at family gatherings, lugged heavy camera bags around, and for that very reason sometimes left them at home.
+          Over the last few years though the hobby has moved more and more to the centre, and I regularly try out new things.
+          Right now I'm most drawn to portrait photography. Every person is unique, and the human interaction makes each shoot something special.
+          But I also just love being out with the camera and keeping an eye out for interesting subjects.
+        </p>
+        <p>
+          I'm always looking for new faces for my portraits, regardless of age or gender.
+          If you enjoy being in front of the camera and are interested in a collaboration, feel free to get in touch <a href="collab-en.html">here</a>.
+        </p>
+        <p>
+          For general enquiries, just send me a message at <a href="#" class="email-link">contact@fcwphoto.com</a>.
+        </p>
+
+        <h2 style="margin-top: 32px;">Gear</h2>
+        <table class="gear-table">
+          <tr><td>Camera</td><td>Fujifilm X-T5</td></tr>
+          <tr><td>Lenses</td><td>Fujifilm 33 mm f/1.4, Sigma 56 mm f/1.4, Fujifilm 90 mm f/2, and a few zooms</td></tr>
+          <tr><td>Flash</td><td>2&times; Godox MS200V, 1&times; Godox V860III</td></tr>
+          <tr><td>Studio</td><td>2&times; octabox, 2&times; strip box, 1&times; large reflective umbrella, several shoot-through umbrellas, various backdrops</td></tr>
+          <tr><td>Editing</td><td>Lightroom Classic, Photoshop</td></tr>
+        </table>
+      </div>
+    </div>
+  </main>
+  <script>
+    (function(){ var a = document.querySelector('.email-link'); var e = 'contact'+'@'+'fcwphoto.com'; a.href = 'mailto:' + e; })();
+  </script>
+
+  <div id="about-lightbox" class="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="about-lb-close" aria-label="Close">&times;</button>
+    <div class="lightbox-content">
+      <img id="about-lb-img" src="" alt="Portrait of the photographer" />
+      <p class="lightbox-title"><a href="https://www.flickr.com/photos/flello/55230552180/" target="_blank" rel="noopener" style="color:inherit;opacity:0.6;font-size:0.75em">View on Flickr</a></p>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var lb = document.getElementById('about-lightbox');
+      var lbImg = document.getElementById('about-lb-img');
+      document.getElementById('about-img').addEventListener('click', function(){
+        lbImg.src = this.src;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+      document.getElementById('about-lb-close').addEventListener('click', function(){
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      });
+      lb.addEventListener('click', function(e){ if(e.target === lb){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }});
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && lb.classList.contains('open')){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }});
+    })();
+  </script>
+
+  <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
+    <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
+    &nbsp;&middot;&nbsp;
+    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Datenschutz</a>
+  </footer>
+
+</body>
+</html>

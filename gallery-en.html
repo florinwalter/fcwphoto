@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery &mdash; fcwphoto</title>
+  <meta name="description" content="Photo gallery by Florin Walter — Portrait, Landscape, City, Nature." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Gallery — fcwphoto" />
+  <meta property="og:description" content="Photo gallery by Florin Walter — Portrait, Landscape, City, Nature." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="748400f4-da05-4f5e-8b74-1cd7dfafafb4"></script>
+</head>
+<body>
+
+  <header>
+    <a href="index-en.html" class="site-name">fcwphoto</a>
+    <nav>
+      <a href="index-en.html">Home</a>
+      <a href="about-en.html">About</a>
+      <details class="nav-dropdown">
+        <summary><a href="gallery-en.html" aria-current="page">Gallery</a></summary>
+        <div class="nav-dropdown-menu">
+          <a href="portrait-en.html">Portrait</a>
+          <a href="landscape-en.html">Landscape</a>
+          <a href="city-en.html">City</a>
+          <a href="nature-en.html">Nature</a>
+        </div>
+      </details>
+      <a href="blog-en.html">Blog</a>
+      <a href="collab-en.html">Collab</a>
+    </nav>
+    <div class="lang-switcher">
+      <a href="gallery.html" class="lang-btn">DE</a>
+      <span>/</span>
+      <a href="gallery-en.html" class="lang-btn" aria-current="true">EN</a>
+    </div>
+  </header>
+
+  <main class="gallery-overview">
+    <a class="gallery-cat-card" href="portrait-en.html">
+      <img src="https://flickr.com/photo_download.gne?id=55230367874&secret=0d6ee50f78&size=l&source=photoPageEngagement" alt="Portrait" />
+      <div class="gallery-cat-label"><span>Portrait</span></div>
+    </a>
+    <a class="gallery-cat-card" href="landscape-en.html">
+      <img src="https://www.flickr.com/photo_download.gne?id=55147933695&secret=9e5f83597d&size=l&source=photoPageEngagement" alt="Landscape" />
+      <div class="gallery-cat-label"><span>Landscape</span></div>
+    </a>
+    <a class="gallery-cat-card" href="city-en.html">
+      <img src="https://www.flickr.com/photo_download.gne?id=55334239853&secret=e3ab5299a3&size=l&source=photoPageEngagement" alt="City" />
+      <div class="gallery-cat-label"><span>City</span></div>
+    </a>
+    <a class="gallery-cat-card" href="nature-en.html">
+      <img src="https://www.flickr.com/photo_download.gne?id=55228125695&secret=fc9584b97e&size=l&source=photoPageEngagement" alt="Nature" />
+      <div class="gallery-cat-label"><span>Nature</span></div>
+    </a>
+  </main>
+
+  <script>
+    document.querySelectorAll('.gallery-cat-card img').forEach(function(img) {
+      if (img.complete) { img.classList.add('loaded'); }
+      else { img.addEventListener('load', function() { img.classList.add('loaded'); }); }
+    });
+  </script>
+
+  <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
+    <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
+    &nbsp;&middot;&nbsp;
+    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Datenschutz</a>
+  </footer>
+
+</body>
+</html>
