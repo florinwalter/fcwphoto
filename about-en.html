@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About &mdash; fcwphoto</title>
+  <meta name="description" content="About Florin Walter — portrait and still life photography, based in Basel." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="About — fcwphoto" />
+  <meta property="og:description" content="About Florin Walter — portrait and still life photography, based in Basel." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="748400f4-da05-4f5e-8b74-1cd7dfafafb4"></script>
+</head>
+<body>
+
+  <header>
+    <a href="index-en.html" class="site-name">fcwphoto</a>
+    <nav>
+      <a href="index-en.html">Home</a>
+      <a href="about-en.html" aria-current="page">About</a>
+      <details class="nav-dropdown">
+        <summary><a href="gallery-en.html">Gallery</a></summary>
+        <div class="nav-dropdown-menu">
+          <a href="portrait-en.html">Portrait</a>
+          <a href="field-notes-en.html">Field Notes</a>
+        </div>
+      </details>
+      <a href="collab-en.html">Collab</a>
+    </nav>
+    <div class="lang-switcher">
+      <a href="about.html" class="lang-btn">DE</a>
+      <span>/</span>
+      <a href="about-en.html" class="lang-btn" aria-current="true">EN</a>
+    </div>
+  </header>
+
+  <main class="about-page">
+    <div class="about-layout">
+      <div class="about-image">
+        <img src="https://www.flickr.com/photo_download.gne?id=55290888385&secret=d5ecd0f727&size=l&source=photoPageEngagement" alt="Portrait of the photographer" class="about-photo" id="about-img" style="cursor:pointer" />
+      </div>
+      <div class="about-text">
+        <p>
+          I'm Florin, a photographer based in Basel.
+          I do something completely different for my day job, but photography has become one of my favourite pastimes.
+          That's why I spend a lot of my evenings and weekends out looking for interesting subjects on long photo walks through the city, or, more and more lately, doing portrait sessions in my home studio.
+        </p>
+        <p>
+          If you're interested in a portrait shoot, I'd love to hear from you <a href="collab-en.html">here</a>.
+          For general enquiries, just send me a message at <a href="#" class="email-link">contact@fcwphoto.com</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+  <script>
+    (function(){ var a = document.querySelector('.email-link'); var e = 'contact'+'@'+'fcwphoto.com'; a.href = 'mailto:' + e; })();
+  </script>
+
+  <div id="about-lightbox" class="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="about-lb-close" aria-label="Close">&times;</button>
+    <div class="lightbox-content">
+      <img id="about-lb-img" src="" alt="Portrait of the photographer" />
+      <p class="lightbox-title"><a href="https://www.flickr.com/photos/flello/55230552180/" target="_blank" rel="noopener" style="color:inherit;opacity:0.6;font-size:0.75em">View on Flickr</a></p>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var lb = document.getElementById('about-lightbox');
+      var lbImg = document.getElementById('about-lb-img');
+      document.getElementById('about-img').addEventListener('click', function(){
+        lbImg.src = this.src;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+      document.getElementById('about-lb-close').addEventListener('click', function(){
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      });
+      lb.addEventListener('click', function(e){ if(e.target === lb){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }});
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && lb.classList.contains('open')){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }});
+    })();
+  </script>
+
+  <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
+    <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
+    &nbsp;&middot;&nbsp;
+    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Datenschutz</a>
+  </footer>
+
+</body>
+</html>

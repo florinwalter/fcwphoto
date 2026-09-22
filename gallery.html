@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery &mdash; fcwphoto</title>
+  <meta name="description" content="Fotogalerie von Florin Walter — Portrait und Field Notes." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Gallery — fcwphoto" />
+  <meta property="og:description" content="Fotogalerie von Florin Walter — Portrait und Field Notes." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="748400f4-da05-4f5e-8b74-1cd7dfafafb4"></script>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="site-name">fcwphoto</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <details class="nav-dropdown">
+        <summary><a href="gallery.html" aria-current="page">Gallery</a></summary>
+        <div class="nav-dropdown-menu">
+          <a href="portrait.html">Portrait</a>
+          <a href="field-notes.html">Field Notes</a>
+        </div>
+      </details>
+      <a href="collab.html">Collab</a>
+    </nav>
+    <div class="lang-switcher">
+      <a href="gallery.html" class="lang-btn" aria-current="true">DE</a>
+      <span>/</span>
+      <a href="gallery-en.html" class="lang-btn">EN</a>
+    </div>
+  </header>
+
+  <main class="gallery-overview">
+    <a class="gallery-cat-card" href="portrait.html">
+      <img src="https://flickr.com/photo_download.gne?id=55230367874&secret=0d6ee50f78&size=l&source=photoPageEngagement" alt="Portrait" />
+      <div class="gallery-cat-label"><span>Portrait</span></div>
+    </a>
+    <a class="gallery-cat-card" href="field-notes.html">
+      <img src="https://www.flickr.com/photo_download.gne?id=55334239853&secret=e3ab5299a3&size=l&source=photoPageEngagement" alt="Field Notes" />
+      <div class="gallery-cat-label"><span>Field Notes</span></div>
+    </a>
+  </main>
+
+  <script>
+    document.querySelectorAll('.gallery-cat-card img').forEach(function(img) {
+      if (img.complete) { img.classList.add('loaded'); }
+      else { img.addEventListener('load', function() { img.classList.add('loaded'); }); }
+    });
+  </script>
+
+  <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
+    <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
+    &nbsp;&middot;&nbsp;
+    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Datenschutz</a>
+  </footer>
+
+</body>
+</html>

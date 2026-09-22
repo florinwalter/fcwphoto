@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About &mdash; fcwphoto</title>
+  <meta name="description" content="Über Florin Walter — Portrait- und Stillfotografie aus Basel." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="About — fcwphoto" />
+  <meta property="og:description" content="Über Florin Walter — Portrait- und Stillfotografie aus Basel." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="748400f4-da05-4f5e-8b74-1cd7dfafafb4"></script>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="site-name">fcwphoto</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <details class="nav-dropdown">
+        <summary><a href="gallery.html">Gallery</a></summary>
+        <div class="nav-dropdown-menu">
+          <a href="portrait.html">Portrait</a>
+          <a href="field-notes.html">Field Notes</a>
+        </div>
+      </details>
+      <a href="collab.html">Collab</a>
+    </nav>
+    <div class="lang-switcher">
+      <a href="about.html" class="lang-btn" aria-current="true">DE</a>
+      <span>/</span>
+      <a href="about-en.html" class="lang-btn">EN</a>
+    </div>
+  </header>
+
+  <main class="about-page">
+    <div class="about-layout">
+      <div class="about-image">
+        <img src="https://www.flickr.com/photo_download.gne?id=55290888385&secret=d5ecd0f727&size=l&source=photoPageEngagement" alt="Portrait des Fotografen" class="about-photo" id="about-img" style="cursor:pointer" />
+      </div>
+      <div class="about-text">
+        <p>
+          Ich bin Florin, Fotograf in Basel.
+          Hauptberuflich mache ich etwas ganz anderes, doch die Fotografie ist eine meiner liebsten Freizeitbeschäftigungen geworden.
+          Deshalb verbringen ich meine Abende und Wochenenden oft auf der Suche nach interessanten Motiven mit ausgedehnten Fotospaziergängen durch die Stadt, oder in letzter Zeit auch immer wieder mit Portrait-Sessions in meinem Home-Studio.
+        </p>
+        <p>
+          Falls du Interesse an einem Portrait-Shooting hast, würde ich mich sehr freuen wenn du dich <a href="collab.html">hier</a> meldest.
+          Für allgemeine Anfragen, schreib mir einfach eine Nachricht an <a href="#" class="email-link">contact@fcwphoto.com</a>.
+        </p>
+
+      </div>
+    </div>
+  </main>
+  <script>
+    (function(){ var a = document.querySelector('.email-link'); var e = 'contact'+'@'+'fcwphoto.com'; a.href = 'mailto:' + e; })();
+  </script>
+
+  <div id="about-lightbox" class="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="about-lb-close" aria-label="Schließen">&times;</button>
+    <div class="lightbox-content">
+      <img id="about-lb-img" src="" alt="Portrait des Fotografen" />
+      <p class="lightbox-title"><a href="https://www.flickr.com/photos/flello/55230552180/" target="_blank" rel="noopener" style="color:inherit;opacity:0.6;font-size:0.75em">Auf Flickr ansehen</a></p>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var lb = document.getElementById('about-lightbox');
+      var lbImg = document.getElementById('about-lb-img');
+      document.getElementById('about-img').addEventListener('click', function(){
+        lbImg.src = this.src;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+      document.getElementById('about-lb-close').addEventListener('click', function(){
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      });
+      lb.addEventListener('click', function(e){ if(e.target === lb){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }});
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && lb.classList.contains('open')){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }});
+    })();
+  </script>
+
+  <footer style="text-align: center; padding: 40px; font-size: 0.75rem; color: #555;">
+    <a href="impressum.html" style="color: #555; text-decoration: none;">Impressum</a>
+    &nbsp;&middot;&nbsp;
+    <a href="datenschutz.html" style="color: #555; text-decoration: none;">Datenschutz</a>
+  </footer>
+
+</body>
+</html>
