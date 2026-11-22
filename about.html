@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About &mdash; fcwphoto</title>
+  <meta name="description" content="About Florin Walter — portrait and still life photography, based in Basel." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="About — fcwphoto" />
+  <meta property="og:description" content="About Florin Walter — portrait and still life photography, based in Basel." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="748400f4-da05-4f5e-8b74-1cd7dfafafb4"></script>
+</head>
+<body>
+
+  <aside class="side">
+    <a href="index.html" class="wordmark">fcwphoto</a>
+    <nav>
+      <a href="index.html">Field Notes</a>
+      <a href="people.html">People</a>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+    <div class="side-foot">
+      <a href="impressum.html">Imprint</a><br />
+      <a href="datenschutz.html">Privacy</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="about">
+      <img src="https://www.flickr.com/photo_download.gne?id=55290888385&secret=d5ecd0f727&size=l&source=photoPageEngagement" alt="Portrait of the photographer" />
+      <div>
+        <p>
+          I'm Florin, a photographer based in Basel. My day job is something completely different, but photography has become one of my favourite pastimes. I take pictures of all kinds of things, but I especially enjoy full-day hikes through the landscape and portrait sessions in my home studio.
+        </p>
+        <p>
+          For enquiries, write to <a href="#" class="email-link"></a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('.email-link').forEach(function (a) {
+      var addr = 'contact' + '@' + 'fcwphoto.com';
+      a.href = 'mailto:' + addr;
+      a.textContent = addr;
+    });
+  </script>
+</body>
+</html>
