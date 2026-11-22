@@ -3,6 +3,8 @@
   --text: #111;
   --muted: #999;
   --side: 220px;
+  --gap: clamp(32px, 6vw, 80px);
+  --pad: clamp(12px, 3vw, 40px);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -58,20 +60,23 @@ body {
   display: flex;
   flex-direction: column;
 }
-/* Each photo gets one full screen; the whole photo is always
-   visible and any leftover space becomes white margin. */
+/* Photos keep their natural proportions, separated by a fixed gap.
+   Each one is capped to the viewport height so it is always fully visible. */
+.photos { align-items: center; gap: var(--gap); padding: var(--gap) var(--pad); }
 .photos img {
   display: block;
-  width: 100%;
-  height: 100vh;
-  height: 100svh;
-  padding: clamp(12px, 3vw, 40px);
-  object-fit: contain;
-  scroll-snap-align: start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 2 * var(--pad));
+  max-height: calc(100svh - 2 * var(--pad));
+  scroll-snap-align: center;
   cursor: zoom-in;
   opacity: 0;
   transition: opacity 0.6s ease;
 }
+/* Placeholder height so lazy images don't all load at once */
+.photos img:not(.loaded) { min-height: 50svh; }
 .photos img.loaded { opacity: 1; }
 
 /* About + contact */
@@ -98,8 +103,11 @@ body {
 
 @media (max-width: 760px) {
   body { display: block; }
+  html { scroll-snap-type: none; scroll-behavior: auto; }
+  .photos img { scroll-snap-align: none; }
   .side {
-    position: static;
+    position: relative;
+    z-index: 2;
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
@@ -109,7 +117,6 @@ body {
   }
   .side nav { flex-direction: row; gap: 20px; }
   .side-foot { display: none; }
-  .photos img { height: 80vh; height: 80svh; }
 }
 
 /* Lightbox */
